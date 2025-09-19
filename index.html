@@ -1,24 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pokémon Wallpapers</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar -->
-  <header>
-    <h1>✨ Pokémon Wallpapers ✨</h1>
-    <input type="text" id="search" placeholder="Search your Pokémon...">
+  <!-- 🔝 Navbar -->
+  <header class="navbar">
+    <h1>ViciousDraco's Pokémon Wallpapers</h1>
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Search Pokémon..." />
+      <button id="clearSearch">✖</button>
+    </div>
+    <div class="nav-actions">
+      <button id="favoritesToggle" class="icon-btn">♡ Favorites</button>
+    </div>
   </header>
 
-  <!-- Gallery -->
-  <main id="gallery"></main>
+  <!-- 🔘 Generation Filters -->
+  <div class="gen-filters">
+    <button data-gen="1">Gen 1</button>
+    <button data-gen="2">Gen 2</button>
+    <button data-gen="3">Gen 3</button>
+    <button data-gen="4">Gen 4</button>
+    <button data-gen="5">Gen 5</button>
+    <button data-gen="6">Gen 6</button>
+    <button data-gen="7">Gen 7</button>
+    <button data-gen="8">Gen 8</button>
+  </div>
 
-  <!-- Footer -->
+  <!-- 🖼 Gallery -->
+  <main>
+    <section id="gallery" class="gallery"></section>
+    <div class="controls">
+      <button id="loadMore" class="btn">Load More Pokémon</button>
+    </div>
+  </main>
+
+  <!-- 📖 Pokédex Modal -->
+  <div id="pokedexModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2 id="modalName"></h2>
+      <img id="modalImg" src="" alt="Pokémon" />
+      <p id="modalEntry"></p>
+    </div>
+  </div>
+
+  <!-- 🔻 Footer -->
   <footer>
-    <p>Made with ❤️ by You | Powered by PokéAPI</p>
+    <p>Built with Draco using <a href="https://pokeapi.co/" target="_blank">PokéAPI</a> | By Draco Lance</p>
   </footer>
 
   <script src="script.js"></script>
